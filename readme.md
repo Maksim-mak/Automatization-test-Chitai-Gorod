@@ -94,12 +94,6 @@ Chitai-gorod
 
 pytest test_api.py --alluredir=allure-results
 
-
-Или, если хотите запустить все тесты:
-
-pytest --alluredir=allure-results
-
-
 #### Запуск тестов UI
 
 Чтобы запустить тесты пользовательского интерфейса, используйте следующую команду:
