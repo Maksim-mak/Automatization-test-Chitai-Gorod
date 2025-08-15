@@ -86,17 +86,41 @@ Chitai-gorod
 6. Чтобы найти User Agent, в звголовках запрса найти **User Agent**. Скопировать и вставить его в файл constants.py -> User_Agent
 7. Чтобы найти USer ID, зайти в cookies, и найти **gdeslon.ru.user_id** и скопировать значение. Добавить его в файл constants.py -> User_ID
 
-### Запуск тестов API
+### Запуск тестов
 
-Чтобы запустить тесты API, используйте следующую команду:  pytest -k test_api.py
+#### Запуск тестов API
 
-### Запуск тестов UI
+Чтобы запустить тесты API, используйте следующую команду:
 
-Чтобы запустить тесты пользовательского интерфейса, используйте следующую команду:  pytest -k test_ui.py
+pytest test_api.py --alluredir=allure-results
 
-### Запуск всех тестов
+
+Или, если хотите запустить все тесты:
+
+pytest --alluredir=allure-results
+
+
+#### Запуск тестов UI
+
+Чтобы запустить тесты пользовательского интерфейса, используйте следующую команду:
+
+pytest test_ui.py --alluredir=allure-results
+
+
+#### Запуск всех тестов
 Чтобы запустить все тесты в проекте, используйте следующую команду:
-pytest
+
+pytest --alluredir=allure-results
+
+
+### Генерация отчета Allure
+
+Чтобы создать отчет Allure, выполните:
+
+allure serve allure-results
+
+
+### Запуск тестов в Visual Studio Code
 
 ### Запуск тестов в Visual Studio Code
 Для удобства запуска тестов вы также можете использовать интерфейс Visual Studio Code.
